@@ -10,7 +10,6 @@ const registerNewUser = functions
             functions.logger.info("New user created: " + user.uid);
             await admin.firestore().collection("users").doc(user.uid).set({});
         } else functions.logger.error("No user object received");
-    }
-    );
+    });
 
 export default registerNewUser;
